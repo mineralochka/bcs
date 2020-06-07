@@ -24,7 +24,7 @@ public class Allocator implements Runnable {
             doAllocate();
         }
         final long start = System.currentTimeMillis();
-        while (System.currentTimeMillis() - start < 60 * 1000) {
+        while (System.currentTimeMillis() - start < 10 * 1000) {
             doAllocate();
             counter++;
             if (counter < 0) {
